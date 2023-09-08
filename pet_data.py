@@ -1,11 +1,27 @@
+import random
+
+
 def get_choise():
     while True:
         choise_str = input("Wybierz działanie: ")
         try:
             choise = int(choise_str)
-            return choise
+            if choise < 1 or choise > 4:
+                print("Błąd: Wybierz działanie menu 1-4.")
+            else:
+                return choise
         except ValueError:
             print("Błąd: Wybierz działanie menu 1-4: ")
+
+
+def key_generator(pets):
+    while True:
+        key = random.randint(4000, 4999)
+        if key in pets:
+            new_key = random.randint(4000, 4999)
+            key = new_key
+        else:
+            return key
 
 
 def get_name():
