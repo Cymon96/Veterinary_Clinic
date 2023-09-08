@@ -1,0 +1,18 @@
+{
+    "Cymon": {
+        "Imie": "Cymon",
+        "Gatunek": "Pies",
+        "Wiek": 15,
+        "Waga": 17.5,
+        "Imie opiekuna": "Jakub",
+        "Nazwisko opiekuna": "Cybiak"
+    },
+    "Chappie": {
+        "Imie": "Chappie",
+        "Gatunek": "Pies",
+        "Wiek": 7,
+        "Waga": 10.0,
+        "Imie opiekuna": "Natalia",
+        "Nazwisko opiekuna": "Jaworska"
+    }
+}
