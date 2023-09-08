@@ -1,5 +1,15 @@
 {
-    "Cymon": {
+    "5": {
+        "ID": 5,
+        "Imie": "Belzedup",
+        "Gatunek": "Demon",
+        "Wiek": 1500,
+        "Waga": 3500.0,
+        "Imie opiekuna": "Satan",
+        "Nazwisko opiekuna": ""
+    },
+    "1": {
+        "ID": 1,
         "Imie": "Cymon",
         "Gatunek": "Pies",
         "Wiek": 15,
@@ -7,12 +17,40 @@
         "Imie opiekuna": "Jakub",
         "Nazwisko opiekuna": "Cybiak"
     },
-    "Chappie": {
+    "3": {
+        "ID": 3,
         "Imie": "Chappie",
         "Gatunek": "Pies",
-        "Wiek": 7,
+        "Wiek": 8,
         "Waga": 10.0,
         "Imie opiekuna": "Natalia",
         "Nazwisko opiekuna": "Jaworska"
+    },
+    "2": {
+        "ID": 2,
+        "Imie": "Hakker",
+        "Gatunek": "Pies",
+        "Wiek": 3,
+        "Waga": 30.0,
+        "Imie opiekuna": "Wioletta",
+        "Nazwisko opiekuna": "Nieznane"
+    },
+    "4": {
+        "ID": 4,
+        "Imie": "Fdf",
+        "Gatunek": "Dff",
+        "Wiek": 15,
+        "Waga": 17.5,
+        "Imie opiekuna": "Dsf",
+        "Nazwisko opiekuna": "Sdf"
+    },
+    "4387": {
+        "ID": 4387,
+        "Imie": "Burek",
+        "Gatunek": "Pies",
+        "Wiek": 5,
+        "Waga": 13.3,
+        "Imie opiekuna": "Jan",
+        "Nazwisko opiekuna": "Kowalki"
     }
 }

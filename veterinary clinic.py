@@ -29,6 +29,7 @@ while True:
         case Menu.register:
             print("\n")
 
+            key = pet_data.key_generator(pets)
             name = pet_data.get_name()
             species = pet_data.get_species()
             age = pet_data.get_age()
@@ -36,7 +37,8 @@ while True:
             onwers_name = pet_data.get_owners_name()
             owners_surname = pet_data.get_owners_surname()
 
-            pets[name] = {
+            pets[key] = {
+                "ID": key,
                 "Imie": name,
                 "Gatunek": species,
                 "Wiek": age,
@@ -46,19 +48,22 @@ while True:
             }
 
             print("\n")
-            print(f"Zarejestrowano zwierzę o imieniu: {name}")
-            for key, value in pets[name].items():
-                print(f"{key}: {value}")
+            print(f"Zarejestrowano zwierzę o imieniu: {name} ID: {key}")
+            for number, value in pets[key].items():
+                print(f"{number}: {value}")
             with open("Animal_Patient.json", "w") as file:
                 json.dump(pets, file, indent=4)
 
         case Menu.unregister:
-            unregister = input("Podaj imie zwierzecia które chcesz wyrejestrować: ").capitalize()
+            unregister = input("Podaj numer ID zwierzecia które chcesz wyrejestrować: ")
             if unregister in pets:
+                pet = pets[unregister]
                 del pets[unregister]
-                print("Wyrejestrowano zwierze o imieniu: ", unregister)
+                print(f"Wyrejestrowano zwierzę o imieniu: {pet['Imie']} z numerem ID: {unregister}")
                 with open("Animal_Patient.json", "w") as file:
                     json.dump(pets, file, indent=4)
+            else:
+                print(f"Nie znaleziono zwierzęcia z numerem ID: {unregister}")
 
         case Menu.show:
             for patient in pets:
@@ -67,7 +72,7 @@ while True:
                     print(info, pets[patient][info])
 
         case Menu.search:
-            search = input("Podaj imie zwierzęcia: ").capitalize()
+            search = input("Podaj numer ID zwierzęcia: ")
             if search in pets:
                 print("\n")
                 for key, value in pets[search].items():
